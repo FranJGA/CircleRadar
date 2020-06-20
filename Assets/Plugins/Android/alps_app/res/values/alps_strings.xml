@@ -1,0 +1,6 @@
+<resources>
+    <string name="alps_admob_app_id">ca-app-pub-5639474130914079~2739474489</string>
+
+    <string name="live_wallpaper">Live wallpaper</string>
+    <string name="settings">Settings</string>
+</resources>

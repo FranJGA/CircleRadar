@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:alps_core="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps"
+    xmlns:alps_admob="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.admob"
+    xmlns:alps_billing="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.billing"
+	
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	
+    <!-- You can use any custom layout editing as long as the ListView is retained. -->
+
+    <SurfaceView
+        android:id="@+id/alps_id_preference_surface"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="0"/>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+</LinearLayout>

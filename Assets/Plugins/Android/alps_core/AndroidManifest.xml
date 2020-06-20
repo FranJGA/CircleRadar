@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androbean.android.unityplugin.alps"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
+
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" >
+    </uses-feature>
+
+    <application>     
+
+        <activity
+            android:name="com.androbean.android.unityplugin.alps.AlpsActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.androbean.android.unityplugin.alps.AlpsPreferencesActivity"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustPan">
+        </activity> <!-- Without explicit hardwareAccelerated="true" , preference activity scrolling was very slow -->
+
+        <service
+            android:name="com.androbean.android.unityplugin.alps.AlpsWallpaperService"
+            android:enabled="true"
+            android:icon="@drawable/alps_app_icon"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/alps_wallpaper" >
+            </meta-data>
+        </service>
+		
+    </application>
+
+</manifest>

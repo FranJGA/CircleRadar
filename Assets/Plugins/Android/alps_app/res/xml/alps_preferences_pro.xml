@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:alps_core="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps"
+    xmlns:alps_admob="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.admob"
+    xmlns:alps_billing="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.billing">
+	
+    <PreferenceCategory android:title="Connect wih me">
+        <com.androbean.android.unityplugin.alps.preferences.SupportPreference
+            alps_core:email="example@gmail.com"
+            alps_core:facebook_id="example"
+            alps_core:googleplus_id="example"
+            alps_core:twitter_id="example"/>
+			
+		<com.androbean.android.unityplugin.alps.preferences.ClickPreference
+            android:key="hidden1"
+            android:title="Hidden 1"
+            android:summary="Placeholder preference to showcase preference hiding."/>
+			
+		<com.androbean.android.unityplugin.alps.preferences.ClickPreference
+            android:key="hidden2"
+            android:title="Hidden 2"
+            android:summary="Placeholder preference to showcase preference hiding."/>
+    </PreferenceCategory>
+	
+	<PreferenceCategory android:title="Freemium">
+        <com.androbean.android.unityplugin.alps.preferences.ClickPreference
+            android:key="downgrade"
+            android:title="Cancel pro access"
+            android:summary="Revert back to non-pro version for testing. Use [adb shell pm clear com.android.vending] to clear cache and restart app if you don't see error code 8 in Logcat."/>
+			
+		<com.androbean.android.unityplugin.alps.preferences.ClickPreference
+            android:key="refresh"
+            android:title="Refresh purchases"
+            android:summary="Refresh purchase status from server."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Performance settings">
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="60"
+            android:key="fps"
+            android:summary="Adjust the number of frames drawn per second. Higher values will use more battery and may slow down the device."
+            android:title="FPS"/>
+
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="60"
+            android:key="resolution"
+            android:summary="Adjust the display resolution. Higher values will use more battery and may be slower in some devices."
+            android:title="Resolution"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Scrolling">
+        <com.androbean.android.unityplugin.alps.preferences.SpinnerPreference
+            android:defaultValue="0"
+            android:entries="@array/scrolling_types"
+            android:key="camera_scroll_mode"
+            android:summary="Choose between free scrolling or homescreens bound scrolling."
+            android:title="Scrolling type"/>
+
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="50"
+            android:key="camera_scroll_speed"
+            android:summary="Set the speed of scrolling while you drag or swipe on the screen."
+            android:title="Scroll speed"/>
+
+        <android.preference.SwitchPreference
+            android:defaultValue="1"
+            android:key="camera_scroll_auto"
+            android:summary="Select to enable automatic scrolling of the content."
+            android:title="Enable auto-scroll"/>
+
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="50"
+            android:key="camera_scroll_auto_speed"
+            android:summary="Set the auto-scrolling speed separately from scrolling speed."
+            android:title="Auto-scrolling speed"/>
+
+        <android.preference.SwitchPreference
+            android:defaultValue="1"
+            android:key="camera_scroll_auto_bidirectional"
+            android:summary="Let auto-scrolling happen in forward and in backward directions."
+            android:title="Bidirectional auto-scroll"/>
+
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="50"
+            android:key="camera_scroll_position_center"
+            android:summary="Set the center position of the scroll range. Camera will scroll forward and backward from here."
+            android:title="Scroll center"/>
+
+        <com.androbean.android.unityplugin.alps.preferences.SliderPreference
+            android:defaultValue="100"
+            android:key="camera_scroll_position_range"
+            android:summary="Set the scroll range, which decides the extend by which camera can swing from center position"
+            android:title="Scroll range"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Text">
+    	<com.androbean.android.unityplugin.alps.preferences.TextPreference
+            android:defaultValue="#FF008BFF"
+            android:key="text_label"
+            android:title="Text label"
+            android:summary="Set the text label."/>
+
+    	<com.androbean.android.unityplugin.alps.preferences.ColorPreference
+            android:defaultValue="ALPS"
+            android:key="text_color"
+            android:title="Text color"
+            android:summary="Choose the color for the text."
+			alps_core:has_alpha="true"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="More">
+		<com.androbean.android.unityplugin.alps.preferences.ClickPreference
+            android:key="promotion"
+            android:title="My other apps"
+            android:summary="Take a look at my other apps in PlayStore."/>
+	</PreferenceCategory>
+</PreferenceScreen>

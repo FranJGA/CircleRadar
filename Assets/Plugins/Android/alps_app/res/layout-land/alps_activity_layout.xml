@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:alps_core="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps"
+    xmlns:alps_admob="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.admob"
+    xmlns:alps_billing="http://schemas.android.com/apk/com.androbean.android.unityplugin.alps.billing"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <SurfaceView
+        android:id="@+id/alps_id_activity_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="About ALPS"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="ALPS is a Unity plugin that allows you to easily create live wallpapers for android without AndroidStudio and Java/Kotlin coding. ALPS is stable, clean, customizable and provides all functionalities that live wallpapers will generally need."
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:autoLink="web"
+                    android:text="Get it at: https://assetstore.unity.com/packages/tools/integration/alps-easy-live-wallpapers-for-android-101053"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/alps_id_activity_button_wallpaper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@android:drawable/ic_menu_gallery"
+                android:padding="5dp"
+                android:text="@string/live_wallpaper" />
+
+            <Button
+                android:id="@+id/alps_id_activity_button_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:drawableLeft="@android:drawable/ic_menu_preferences"
+                android:padding="5dp"
+                android:text="@string/settings" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

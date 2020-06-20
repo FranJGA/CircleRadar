@@ -1,0 +1,7 @@
+<resources>
+    <style name="alps_preferences_theme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">#689F38</item>
+		<item name="android:colorPrimaryDark">#33691E</item>
+		<item name="android:colorAccent">#FF8F00</item>
+    </style>
+</resources>

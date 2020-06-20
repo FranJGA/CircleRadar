@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="scrolling_types">
+		<item>Freeform</item>
+		<item>Homescreen</item>
+	</string-array>
+</resources>
