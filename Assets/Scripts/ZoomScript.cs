@@ -15,6 +15,8 @@ public class ZoomScript : MonoBehaviour {
     {
         gameObject.AddComponent<AudioSource> ();
         btn.onClick.AddListener(PlaySound);
+        
+        
        
     }
 
