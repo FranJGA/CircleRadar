@@ -2,7 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ZoomScript
-    - buttonInputModuleScript
+    - circleBallScript
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -11,13 +11,11 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -31,6 +29,8 @@ ScriptsOnlyBuild:
     - Class: 28
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 58
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -49,8 +49,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11336}
-    - Class: 114
       Script: {instanceID: 11376}
     - Class: 114
       Script: {instanceID: 11760}
@@ -61,14 +59,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12620}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 12976}
-    - Class: 114
-      Script: {instanceID: 13936}
+      Script: {instanceID: 13028}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -411,6 +405,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: dee7831311c4c01afb64628fa4215df5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: buttonInputModuleScript
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -531,11 +531,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: dee7831311c4c01afb64628fa4215df5
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: buttonInputModuleScript
+    className: PlayerScript
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: D:/Users/Fran/CircleRadar/CircleRadar v3.apk
+  playerPath: D:/Users/Fran/CircleRadar/CircleRadar v1.apk
